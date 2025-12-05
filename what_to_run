@@ -1,0 +1,10 @@
+root
+|    python probability_bot.py
+|    python live_main.py
+|    python simulated_main.py
+|----chart
+|    ---python chart.py
+|----market_simulator
+|    ---simulated_market_api
+|    ---python -m uvicorn simulated_market_api:app --reload --port 8000
+|    ---curl -X POST "http://127.0.0.1:8000/start?ticks_per_minute=60&speed=10.0"
