@@ -1,0 +1,11 @@
+<html>
+  <body style="text-align: center">
+    <h2>Live Simulated Market</h2>
+    <img id="chart" src="/chart" width="900" />
+    <script>
+      setInterval(() => {
+        document.getElementById("chart").src = "/chart?" + Date.now();
+      }, 1000);
+    </script>
+  </body>
+</html>
